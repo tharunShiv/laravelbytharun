@@ -1,14 +1,9 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{config('app.name', 'shiv')}}</title>
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <h1>Welcome to the About page</h1>
-        <p>This is the Laravel Demo About Page.</p>
-    </body>
-</html>
+@extends('layouts.app')
+@section('content')
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1>{{$title}}</h1>
+            <p>This is the Laravel Demo About Page.</p>
+        </div>
+    </div>
+@endsection    

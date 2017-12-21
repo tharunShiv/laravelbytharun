@@ -8,6 +8,15 @@
         <link rel="stylesheet" href="{{asset('css/app.css')}}" >    <!-- Default Compiled BOOTSTRAP-->
     </head>
     <body>
-        @yield('content')
+        @include('inc.navbar')
+            <div class="container">
+              @include('inc.messages')  
+              @yield('content')
+            </div>
+    <!-- From ckeditor laravel -->
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'article-ckeditor' );
+    </script>
     </body>
 </html>

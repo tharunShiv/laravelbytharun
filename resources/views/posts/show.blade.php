@@ -5,7 +5,7 @@
  <div class="well">
     <h1>{{$post->title}}</h1>
     <p>{!!$post->body !!}</p>
-    <small>{{$post->created_at}}</small>
+    <small>Written at {{$post->created_at}} by {{$post->user->name}} </small>
  <div>
  <hr>
  <a href="/posts/{{$post->id}}/edit" class="btn btn-default">Edit</a>

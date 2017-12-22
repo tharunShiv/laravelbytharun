@@ -7,7 +7,19 @@ use App\Post;   //Model
 use DB; //to use SQL COMMANDS
 
 class PostsController extends Controller
-{
+{   
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('preventBackHistory');
+        $this->middleware('auth', ['except' => ['index', 'show']]);
+    }
+ 
+      
     /**
      * Display a listing of the resource.
      *
